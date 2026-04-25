@@ -34,7 +34,7 @@ The analysis is performed using SQL, focusing on real-world financial analytics 
 
 **-- Check total records in each table**
 ```
-**SELECT COUNT(\*) FROM Countries;**
+SELECT COUNT(\*) FROM Countries;
 
 **SELECT COUNT(\*) FROM Users;**
 
