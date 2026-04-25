@@ -247,7 +247,7 @@ WHERE t.Transaction_date BETWEEN '2023-11-01' AND '2024-05-01'
 GROUP BY m.Merchant_ID, m.Business_name, year, month;
 ```
 
-```
+
 
 ## Findings
 
