@@ -33,7 +33,7 @@ The analysis is performed using SQL, focusing on real-world financial analytics 
 ### 1\. Data Exploration \& Cleaning
 
 **-- Check total records in each table**
-
+```
 **SELECT COUNT(\*) FROM Countries;**
 
 **SELECT COUNT(\*) FROM Users;**
@@ -41,19 +41,20 @@ The analysis is performed using SQL, focusing on real-world financial analytics 
 **SELECT COUNT(\*) FROM Merchants;**
 
 **SELECT COUNT(\*) FROM Transactions;**
-
+```
 
 
 **-- Check for NULL values**
+```
 
 **SELECT \* FROM Users WHERE Email IS NULL OR Name IS NULL;**
 
 **SELECT \* FROM Transactions WHERE Transaction\_amount IS NULL;**
-
+```
 
 
 **-- Check duplicate transactions**
-
+```
 **SELECT Transaction\_ID, COUNT(\*)**
 
 **FROM Transactions**
@@ -61,23 +62,23 @@ The analysis is performed using SQL, focusing on real-world financial analytics 
 **GROUP BY Transaction\_ID**
 
 **HAVING COUNT(\*) > 1;**
-
+```
 **-- Check negative or invalid transaction amounts**
-
+```
 **SELECT \***
 
 **FROM Transactions**
 
 **WHERE Transaction\_amount <= 0;**
-
+```
 
 
 **-- Check date range of transactions**
-
+```
 **SELECT MIN(Transaction\_date), MAX(Transaction\_date)**
 
 **FROM Transactions;**
-
+```
 
 
 ### 2\. Data Analysis \& Findings
